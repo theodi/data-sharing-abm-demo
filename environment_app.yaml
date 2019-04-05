@@ -1,0 +1,10 @@
+name: odi-app
+dependencies:
+  - python=3.6.8
+  - numpy=1.16.2
+  - pandas=0.24.1
+  - plotly=3.6.1
+  - pip:
+    - dash==0.39.0
+    - dash-bootstrap-components==0.3.4
+    - tables==3.5.1

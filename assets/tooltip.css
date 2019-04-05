@@ -1,0 +1,35 @@
+.tooltip{
+  margin:0.1%;
+  font-weight: normal
+}
+
+.tooltip.show{
+    opacity:1
+}
+
+.bs-tooltip-auto[x-placement^=top] .arrow::before,.bs-tooltip-top .arrow::before{
+    top:0;
+    border-width:.4rem .4rem 0;
+    border-top-color:#1DD3A7
+}
+
+.bs-tooltip-auto[x-placement^=right] .arrow,.bs-tooltip-right .arrow{
+    left: 0;
+    width:.4rem;
+    height:.8rem
+}
+
+.bs-tooltip-auto[x-placement^=right] .arrow::before,.bs-tooltip-right .arrow::before{
+    right:0;
+    border-width:.5rem .5rem .5rem 0;
+    border-right-color:#1DD3A7
+}
+
+.tooltip-inner{
+    max-width:200px;
+    padding:.25rem .5rem;
+    color:#fff;
+    text-align:center;
+    background-color:#1DD3A7;
+    border-radius:.25rem
+}
