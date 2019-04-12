@@ -1,5 +1,5 @@
 # data-sharing-abm-demo
-Interactive front-end demo of the [data-sharing-abm-model](https://github.com/theodi/data-sharing-abmmodel).
+Interactive front-end demo of the [data-sharing-abm-model](https://github.com/theodi/data-sharing-abm-model).
 
 ## How to run the app
 
