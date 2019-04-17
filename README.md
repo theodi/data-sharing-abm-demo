@@ -5,7 +5,6 @@ Interactive front-end demo of the [data-sharing-abm-model](https://github.com/th
 
 Using conda environments:
 
-* Navigate to the `final-app` folder in the terminal
 * In a terminal, activate the correct environment: `conda activate odi-app`
 * Start the app: `python odi-app.py`
 * In what follows as output, you will see a message along the lines of `Running on http://0.0.0.0:8050/``
@@ -30,4 +29,4 @@ You can also run the app using docker if you have it installed on your computer:
 
 In order to use conda environments, install [Miniconda](https://conda.io/miniconda.html) or Anaconda if you don't have it yet.
 
-There are two environments: `odi` and `odi-app`, the details of which are in yaml files (`environment_simulation.yaml` and `environment_app.py`). To install, use `conda env create -f /path/to/environment_xxx.yaml` with the correct path and filename.
+To create the correct environment to run the app locally, use `conda env create -f /path/to/environment_app.yaml`. This will create an environment named `odi-app`.
