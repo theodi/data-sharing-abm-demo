@@ -37,15 +37,6 @@ external_stylesheets = [
     dbc.themes.BOOTSTRAP,
 ]
 
-# server = flask.Flask(__name__)
-# app = dash.Dash(__name__, server=server, external_stylesheets=external_stylesheets)
-
-#  CONFIG APP
-# import flask
-# server = flask.Flask(__name__)
-# app = dash.Dash(__name__, sharing=True, server=server, csrf_protect=False, external_stylesheets=external_stylesheets)
-
-
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 server = app.server
 
@@ -491,5 +482,4 @@ for x in TAB_DICT.keys():
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
-    # app.run_server(host='0.0.0.0', port=port, debug=True)
-    app.run_server(host='0.0.0.0', port=port, debug=False)
+    app.run_server(host='0.0.0.0', port=port, debug=True)
