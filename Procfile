@@ -1,1 +1,1 @@
-web: gunicorn --worker-class eventlet -w 1 odi-app:server 
+web: gunicorn -b 0.0.0.0:$PORT --workers 1 --timeout 120 --worker-class gevent odi-app:server 

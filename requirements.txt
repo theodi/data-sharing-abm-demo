@@ -10,3 +10,4 @@ tables==3.5.1
 gunicorn==19.9.0
 flask==1.0.2
 eventlet==0.24.1
+gevent==1.4.0
