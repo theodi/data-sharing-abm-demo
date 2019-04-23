@@ -1,1 +1,1 @@
-web: gunicorn -k eventlet odi-app:server --preload
+web: gunicorn -k eventlet -b 0.0.0.0:$PORT --preload odi-app:server 
