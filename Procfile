@@ -1,1 +1,1 @@
-demo: gunicorn odi-app:server
+web: gunicorn odi-app:server --preload
