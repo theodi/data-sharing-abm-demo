@@ -41,13 +41,13 @@ external_stylesheets = [
 # app = dash.Dash(__name__, server=server, external_stylesheets=external_stylesheets)
 
 #  CONFIG APP
-import flask
-server = flask.Flask(__name__)
-app = dash.Dash(__name__, sharing=True, server=server, csrf_protect=False, external_stylesheets=external_stylesheets)
+# import flask
+# server = flask.Flask(__name__)
+# app = dash.Dash(__name__, sharing=True, server=server, csrf_protect=False, external_stylesheets=external_stylesheets)
 
 
-# app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
-# server = app.server
+app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
+server = app.server
 
 def scenario_input_card(scen_name):
     """
