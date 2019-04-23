@@ -1,1 +1,1 @@
-web: gunicorn odi-app:server --preload -p $PORT
+web: gunicorn odi-app:server --preload
