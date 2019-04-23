@@ -37,8 +37,13 @@ external_stylesheets = [
     dbc.themes.BOOTSTRAP,
 ]
 
-app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
+# server = flask.Flask(__name__)
+# app = dash.Dash(__name__, server=server, external_stylesheets=external_stylesheets)
 
+# from flask_cors import CORS
+# CORS(app)
+
+app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 server = app.server
 
 def scenario_input_card(scen_name):
