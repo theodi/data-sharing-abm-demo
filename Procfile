@@ -1,1 +1,1 @@
-web: gunicorn odi-app:server
+demo: gunicorn odi-app:server
