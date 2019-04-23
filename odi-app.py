@@ -37,11 +37,14 @@ external_stylesheets = [
     dbc.themes.BOOTSTRAP,
 ]
 
+# server = flask.Flask(__name__)
+# app = dash.Dash(__name__, server=server, external_stylesheets=external_stylesheets)
+
+#  CONFIG APP
 import flask
-from random import randint
 server = flask.Flask(__name__)
-server.secret_key = os.environ.get('secret_key', str(randint(0, 1000000)))
-app = dash.Dash(__name__, server=server, external_stylesheets=external_stylesheets)
+app = dash.Dash(__name__, sharing=True, server=server, csrf_protect=False, external_stylesheets=external_stylesheets)
+
 
 # app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 # server = app.server
