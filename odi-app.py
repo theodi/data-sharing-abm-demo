@@ -37,6 +37,8 @@ external_stylesheets = [
     dbc.themes.BOOTSTRAP,
 ]
 
+import flask
+from random import randint
 server = flask.Flask(__name__)
 server.secret_key = os.environ.get('secret_key', str(randint(0, 1000000)))
 app = dash.Dash(__name__, server=server, external_stylesheets=external_stylesheets)
@@ -486,6 +488,5 @@ for x in TAB_DICT.keys():
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
-    app.run_server(host='0.0.0.0', port=port, debug=True)
-
-    # app.run_server(host='0.0.0.0', debug=True)
+    # app.run_server(host='0.0.0.0', port=port, debug=True)
+    app.run_server(port=port, debug=True)
