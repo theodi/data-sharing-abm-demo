@@ -29,7 +29,7 @@ def plot_market_concentration(res_df_1, res_df_2):
                name='Scenario 2')
     ]
     layout = go.Layout(title='Market share of top three companies in each category',
-                       yaxis={'title': 'Percentage of product category served by the top three companies'},
+                       yaxis={'title': 'Percentage of product category <br> served by the top three companies'},
                        xaxis={'title': 'Product category'},
                        font={'family': 'HelveticaNeue'})
     return go.Figure(data=data, layout=layout)
@@ -50,7 +50,7 @@ def plot_firm_specialisation(df1, df2):
     ]
     layout = go.Layout(title='Number of product categories that companies are active in',
                        xaxis={'title': 'Number of product categories'},
-                       yaxis={'title': 'Number of companies'},
+                       yaxis={'title': 'Percentage of companies'},
                        font={'family': 'HelveticaNeue'})
     return go.Figure(data=data, layout=layout)
 
@@ -70,7 +70,7 @@ def plot_complimentarity(df1, df2):
     ]
     layout = go.Layout(title='Number of companies used by consumers in the last year of the tick cycle',
                        xaxis={'title': 'Number of companies'},
-                       yaxis={'title': 'Number of users'},
+                       yaxis={'title': 'Percentage of users'},
                        font={'family': 'HelveticaNeue'})
     return go.Figure(data=data, layout=layout)
 
