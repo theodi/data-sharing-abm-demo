@@ -236,6 +236,8 @@ def plot_new_products(counter1, counter2):
                    marker={'color': scen_colours[1]}, showlegend=False), 2, 1
     )
     fig['layout']['xaxis2'].update(title='Months (ticks)')
+    fig['layout']['yaxis1'].update(title='Number of products')
+    fig['layout']['yaxis2'].update(title='Number of products')
     fig['layout']['font'].update(family='HelveticaNeue')
     return fig
 
