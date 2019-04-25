@@ -29,8 +29,8 @@ def plot_market_concentration(res_df_1, res_df_2):
                name='Scenario 2')
     ]
     layout = go.Layout(title='Market share of top three companies in each category',
-                       yaxis={'title': '% of category served by top three'},
-                       xaxis={'title': 'Category'},
+                       yaxis={'title': 'Percentage of product category served by the top three companies'},
+                       xaxis={'title': 'Product category'},
                        font={'family': 'HelveticaNeue'})
     return go.Figure(data=data, layout=layout)
 
@@ -48,9 +48,9 @@ def plot_firm_specialisation(df1, df2):
                hovertext=['{}%'.format(x) for x in df2.perc],
                name='Scenario 2', marker={'color': scen_colours[1]})
     ]
-    layout = go.Layout(title='Company activity profile',
-                       xaxis={'title': 'Number of categories companies are active in'},
-                       yaxis={'title': 'Frequency'},
+    layout = go.Layout(title='Number of product categories that companies are active in',
+                       xaxis={'title': 'Number of product categories'},
+                       yaxis={'title': 'Number of companies'},
                        font={'family': 'HelveticaNeue'})
     return go.Figure(data=data, layout=layout)
 
@@ -68,9 +68,9 @@ def plot_complimentarity(df1, df2):
                hovertext=['{}%'.format(x) for x in df2.perc],
                name='Scenario 2', marker={'color': scen_colours[1]})
     ]
-    layout = go.Layout(title='Consumer usage profile',
-                       xaxis={'title': 'Number of companies used by consumers in the last year'},
-                       yaxis={'title': 'Frequency'},
+    layout = go.Layout(title='Number of companies used by consumers in the last year of the tick cycle',
+                       xaxis={'title': 'Number of companies'},
+                       yaxis={'title': 'Number of users'},
                        font={'family': 'HelveticaNeue'})
     return go.Figure(data=data, layout=layout)
 
@@ -114,7 +114,7 @@ def plot_quality_difference(df1, df2):
         )
     ]
     layout = go.Layout(
-        title="Highest quality per category",
+        title="Highest quality per product category",
         xaxis={'showgrid': False},
         yaxis={'title': 'Quality', 'showgrid': False},
         font={'family': 'HelveticaNeue'},
@@ -196,8 +196,8 @@ def plot_market_entry(cat_entry_and_exit_df, cat_entry_and_exit_df_2):
                marker={'color': dark_scen_colours[1]}), 1, 2)
     fig['layout']['xaxis2'].update(title="Number of companies", range=limits)
     fig['layout']['xaxis1'].update(title="Number of companies", range=limits)
-    fig['layout']['yaxis1'].update(title="Category")
-    fig['layout'].update(title='Market entry and exit per category')
+    fig['layout']['yaxis1'].update(title="Product category")
+    fig['layout'].update(title='Market entry and exit per product category')
     fig['layout']['font'].update(family='HelveticaNeue')
     fig['layout'].update(barmode='overlay')
 
@@ -235,7 +235,7 @@ def plot_new_products(counter1, counter2):
         go.Scatter(x=ticks, y=np.cumsum(counter2.existing), legendgroup='Scenario 2',
                    marker={'color': scen_colours[1]}, showlegend=False), 2, 1
     )
-    fig['layout']['xaxis2'].update(title='Months')
+    fig['layout']['xaxis2'].update(title='Months (ticks)')
     fig['layout']['font'].update(family='HelveticaNeue')
     return fig
 
@@ -253,8 +253,8 @@ def plot_request_distribution(df1, df2):
         go.Bar(x=np.arange(len(a2)), y=a2,
                name='Scenario 2', marker={'color': scen_colours[1]})
     ]
-    layout = go.Layout(title='Data requests in young companies',
-                       xaxis={'title': 'Number of data requests granted to young companies in their first year'},
-                       yaxis={'title': 'Count'},
+    layout = go.Layout(title='Number of data requests granted to young companies in their first year',
+                       xaxis={'title': 'Number of granted data requests'},
+                       yaxis={'title': 'Number of companies'},
                        font={'family': 'HelveticaNeue'})
     return go.Figure(data=data, layout=layout)
