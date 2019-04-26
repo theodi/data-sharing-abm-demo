@@ -481,5 +481,5 @@ for x in TAB_DICT.keys():
 
 
 if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 5000))
+    port = int(os.environ.get("PORT", 8050))
     app.run_server(host='0.0.0.0', port=port, debug=True)
