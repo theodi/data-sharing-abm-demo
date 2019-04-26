@@ -1,3 +1,5 @@
+import os
+
 import dash
 
 from dash.dependencies import Input, Output, State
@@ -36,7 +38,7 @@ external_stylesheets = [
 ]
 
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
-
+server = app.server
 
 def scenario_input_card(scen_name):
     """
@@ -479,4 +481,5 @@ for x in TAB_DICT.keys():
 
 
 if __name__ == "__main__":
-    app.run_server(host='0.0.0.0', debug=True)
+    port = int(os.environ.get("PORT", 5000))
+    app.run_server(host='0.0.0.0', port=port, debug=True)
