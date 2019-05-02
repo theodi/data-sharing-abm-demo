@@ -29,7 +29,7 @@ def plot_market_concentration(res_df_1, res_df_2):
                name='Scenario 2')
     ]
     layout = go.Layout(title='Market share of top three companies in each category',
-                       yaxis={'title': 'Percentage of product category <br> served by the top three companies'},
+                       yaxis={'title': 'Share of top three companies in product category'},
                        xaxis={'title': 'Product category'},
                        font={'family': 'HelveticaNeue'})
     return go.Figure(data=data, layout=layout)
