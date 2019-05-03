@@ -116,7 +116,7 @@ def plot_quality_difference(df1, df2):
     layout = go.Layout(
         title="Highest quality per product category",
         xaxis={'showgrid': False},
-        yaxis={'title': 'Quality', 'showgrid': False},
+        yaxis={'title': 'Quality score', 'showgrid': False},
         font={'family': 'HelveticaNeue'},
         hovermode='closest'
     )
