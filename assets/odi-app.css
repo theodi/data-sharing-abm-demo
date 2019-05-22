@@ -62,7 +62,6 @@ body{
     color: white;
     padding-right: 2%;
     padding-left: 2%;
-    font-family: HelveticaNeue;
     font-size: 3rem;
     display: flex;
     align-items: center;
@@ -149,7 +148,6 @@ summary:focus {
 
 
 .big-text {
-  font-family: HelveticaNeue;
   font-size: 20px;
   font-weight: 500;
   font-style: normal;
