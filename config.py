@@ -51,11 +51,7 @@ HOVERTEXTS = {
 DISCLAIMER = """
 Disclaimer
 
-The graphs have been produced from running the model once for each combination of inputs and are not statistically significant.
-For a ‘real world’ ABM, the model would be run XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-
-Different outcomes are possible by running the model more times, as the processes which create them are probabilistic.
-The model would ideally be run many more times, creating average output values from the input choices.
+The graphs have been produced by running the model once for each combination of inputs and are not statistically significant. A 'real world' model would need to be run many times, using the probabilistic nature of the processes to create average output values from the input choices.
 """
 
 INTRO_MARKDOWN = """
